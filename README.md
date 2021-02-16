@@ -11,7 +11,7 @@ This project is a simple application emulating a crowdfunding app. It is possibl
 	
 ## Technologies
 Project is created with:
-* React
+* Next.js
 	
 ## Setup
 To run this project, clone the repo and install it locally using npm:
