@@ -11,7 +11,7 @@ export async function fetchStaticPath(id) {
 }
 
 export async function changeDonationField(id) {
-    const response = await http.put(`/projects?id=${id}`, { data: { donated: 10 } });
+    const response = await http.put(`/projects?id=${id}`, { donated: 10 });
     return response.data;
 }
 
