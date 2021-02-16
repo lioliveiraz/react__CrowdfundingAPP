@@ -28,6 +28,7 @@ function Form(props) {
             setError(inputErrors);
 
         } else {
+            userInputs["goal"] = parseFloat(userInputs['goal']);
             const response = await postProject(userInputs);
             setMessage(`Thank you, ${response.creator}.The project ${response.name} was created`, { position: "top-right" });
             toast("message");
@@ -38,7 +39,7 @@ function Form(props) {
 
     return (
         <>
-            {message && <p style={{ color: "red", fontWeight: "bold" }}>{message}</p>}
+            {message && <p style={{ color: "blue", fontWeight: "bold" }}>{message}</p>}
             <form onSubmit={handleSubmit}>
                 <Input type="text" label="name" handleChange={handleUserInput} name="name" />
                 {error.name && <p style={{ color: "red", fontWeight: "bold" }}>{error.name}</p>}

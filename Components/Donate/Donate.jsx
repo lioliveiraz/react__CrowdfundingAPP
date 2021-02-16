@@ -9,17 +9,23 @@ function Donate({ projectId }) {
         setDonationValue(e);
     };
 
-    const makeDonation = async () => {
+    const makeDonation = async (e) => {
+        e.preventDefault();
         const response = await changeDonationField(projectId);
         console.log(response);
     };
 
     return (
-        <div>
+
+
+        <form onSubmit={makeDonation}>
             <h3>Support this project</h3>
+
             <Input type="range" handleChange={handleDonateRange} label={`${donationValue}$`} max={1000} />
-            <button onClick={makeDonation}>Donate</button>
-        </div>
+            <input type="submit" value="Donate" />
+        </form>
+
+
     );
 }
 

@@ -23,8 +23,8 @@ function Details() {
                 <>
                     <h3>{projectDetails.name}</h3>
                     <img src={`/${projectDetails.image}`} alt={`project name: ${projectDetails.name}`} />
-                    <p>{projectDetails.donation}</p>
-                    <p>{projectDetails.goal}</p>
+                    <p>{projectDetails.donation}$</p>
+                    <p>{projectDetails.goal}$</p>
                     <p>{projectDetails.creator}</p>
                     <p>{projectDetails.description}</p>
                     <button onClick={() => setToggleDonate(true)}>Make dreams come true</button>
