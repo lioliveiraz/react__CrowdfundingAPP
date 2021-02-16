@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Suspendisse elementum",
+      "goal": 10,
+      "donated": 0,
+      "creator": "Ligia",
+      "image": "placeholder.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    },
+    {
+      "id": 2,
+      "name": " Nam vitae",
+      "goal": 100,
+      "donated": 0,
+      "creator": "Ligia",
+      "image": "placeholder.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    },
+    {
+      "id": 3,
+      "name": "Nullam convallis",
+      "goal": 250,
+      "donated": 0,
+      "creator": "Ligia",
+      "image": "placeholder.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    },
+    {
+      "id": 4,
+      "name": " Fusce mattis",
+      "goal": 650,
+      "donated": 0,
+      "creator": "Ligia",
+      "image": "placeholder.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    },
+    {
+      "id": 5,
+      "name": "Aliquam non ultrices",
+      "goal": 750,
+      "donated": 0,
+      "creator": "Ligia",
+      "image": "placeholder.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    }
+  ]
+}
