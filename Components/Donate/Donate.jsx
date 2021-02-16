@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Input from '../Input/Input';
 import { changeDonationField } from '../../pages/api/fetchData/requests';
+import { toast } from 'react-toastify';
 
-function Donate({ projectId }) {
+function Donate({ project }) {
     const [donationValue, setDonationValue] = useState(10);
+    const [message, setMessage] = useState("Support this project");
 
     const handleDonateRange = (e) => {
         setDonationValue(e);
@@ -11,17 +13,20 @@ function Donate({ projectId }) {
 
     const makeDonation = async (e) => {
         e.preventDefault();
-        const response = await changeDonationField(projectId);
-        console.log(response);
+        project['donated'] = parseFloat(donationValue);
+        const response = await changeDonationField(project.id, project);
+        /*  response && toast("🦄 YOU ARE AN UNICORN! THANK YOU VERY MUCH 🦄 "); */
+        response && setMessage("🦄 YOU ARE AN UNICORN! THANK YOU VERY MUCH 🦄 ");
+
     };
 
     return (
 
 
         <form onSubmit={makeDonation}>
-            <h3>Support this project</h3>
+            <h3>{message}</h3>
 
-            <Input type="range" handleChange={handleDonateRange} label={`${donationValue}$`} max={1000} />
+            <Input type="range" handleChange={handleDonateRange} label={`${donationValue}$`} max={project.goal} min={10} />
             <input type="submit" value="Donate" />
         </form>
 

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Context } from './../../context/ThemeContext';
 import ProjectCard from './Project/Card';
-import NavBar from './../NavBar/NavBar';
 import SearchBar from '../SearchBar/SearchBar';
 
 function ProjectList() {
@@ -14,13 +13,14 @@ function ProjectList() {
     }, []);
 
 
-
     return (
         <div>
             <SearchBar setProjects={setProjects} />
             {projects ? projects.map(project => (
                 <ProjectCard key={project.id} project={project} />
-            )) : <p>Loading...</p>}
+            )) : projectArr.map(project => (
+                <ProjectCard key={project.id} project={project} />
+            ))}
         </div>
     );
 };

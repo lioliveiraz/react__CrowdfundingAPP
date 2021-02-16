@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
     const { name, image, id } = project;
 
     return (
-        <Link key={id} href={`project/${id}`}>
+        <Link href={`project/${id}`}>
             <div style={{ cursor: "pointer" }}>
                 <h3>{name}</h3>
                 <img src={image} alt={`project name ${name}`} />

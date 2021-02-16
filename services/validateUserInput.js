@@ -10,6 +10,12 @@ const schema = {
 
 };
 
+/**
+ * @function validateUserInput
+ * @param {object} formInputs 
+ * @returns {object} 
+ */
+
 export const validateUserInput = (formInputs) => {
     const { error } = Joi.validate(formInputs, schema, { abortEarly: false });
     if (!error) return null;

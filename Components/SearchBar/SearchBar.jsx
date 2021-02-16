@@ -11,8 +11,6 @@ function SearchBar({ setProjects }) {
             creator.toLowerCase().includes(value.toLowerCase())));
     };
 
-
-
     return (
         <div>
             <Input type="text" placeholder="Search" handleChange={handleSearch} />

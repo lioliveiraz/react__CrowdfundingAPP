@@ -1,19 +1,10 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "Suspendisse elementum",
-      "goal": 10,
-      "donated": 0,
-      "creator": "Ligia",
-      "image": "placeholder.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-    },
-    {
       "id": 2,
       "name": " Nam vitae",
       "goal": 100,
-      "donated": 0,
+      "donated": 53,
       "creator": "Ligia",
       "image": "placeholder.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
@@ -22,7 +13,7 @@
       "id": 3,
       "name": "Nullam convallis",
       "goal": 250,
-      "donated": 0,
+      "donated": 99,
       "creator": "Ligia",
       "image": "placeholder.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
@@ -51,7 +42,7 @@
       "description": "fdsfds",
       "creator": "dfsfds",
       "image": "placeholder.jpg",
-      "donated": 0,
+      "donated": 10,
       "id": 6
     },
     {
@@ -62,6 +53,24 @@
       "image": "placeholder.jpg",
       "donated": 0,
       "id": 7
+    },
+    {
+      "name": "percente",
+      "goal": 100,
+      "description": "dfsfds",
+      "creator": "ligia",
+      "image": "placeholder.jpg",
+      "donated": 16,
+      "id": 8
+    },
+    {
+      "name": "fdsfs",
+      "goal": 300,
+      "description": "dfsfsd",
+      "creator": "fsfds",
+      "image": "placeholder.jpg",
+      "donated": 0,
+      "id": 9
     }
   ]
 }
