@@ -9,12 +9,12 @@ export default function Provider(props) {
     useEffect(async () => {
         const response = await fetchData();
         setProjectArr(response);
+
     }, []);
 
     return (
         <Context.Provider value={{ projectArr }}>
             {props.children}
-
         </Context.Provider>
     );
 

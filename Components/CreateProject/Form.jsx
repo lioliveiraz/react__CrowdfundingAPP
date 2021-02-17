@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from '../Input/Input';
 import { postProject } from '../../pages/api/fetchData/requests';
 import { validateUserInput } from '../../services/validateUserInput';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Form(props) {
     const [userInputs, setUserInputs] = useState({
@@ -26,12 +26,13 @@ function Form(props) {
         const inputErrors = validateUserInput(userInputs);
         if (inputErrors) {
             setError(inputErrors);
+            toast.error(`Ops! Something is not right`);
 
         } else {
             userInputs["goal"] = parseFloat(userInputs['goal']);
             const response = await postProject(userInputs);
-            setMessage(`Thank you, ${response.creator}.The project ${response.name} was created`, { position: "top-right" });
-            toast("message");
+            toast.success(`Thank you, ${response.creator}.The project ${response.name} was created`, { position: "top-right" });
+
 
         }
 
@@ -39,7 +40,6 @@ function Form(props) {
 
     return (
         <>
-            {message && <p style={{ color: "blue", fontWeight: "bold" }}>{message}</p>}
             <form onSubmit={handleSubmit}>
                 <Input type="text" label="name" handleChange={handleUserInput} name="name" />
                 {error.name && <p style={{ color: "red", fontWeight: "bold" }}>{error.name}</p>}
@@ -53,6 +53,8 @@ function Form(props) {
                 <input type="submit" />
 
             </form>
+            <ToastContainer />
+
         </>
 
     );

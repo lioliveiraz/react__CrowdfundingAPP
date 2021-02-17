@@ -22,7 +22,7 @@
       "id": 4,
       "name": " Fusce mattis",
       "goal": 650,
-      "donated": 0,
+      "donated": 308,
       "creator": "Ligia",
       "image": "placeholder.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
@@ -37,40 +37,22 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere gravida risus ac facilisis. Vestibulum eget quam porta, ultrices nisi sed, fermentum eros. Curabitur sed justo a lorem molestie mattis vitae in eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
     },
     {
-      "name": "ligia",
-      "goal": "300",
-      "description": "fdsfds",
-      "creator": "dfsfds",
+      "name": "jygj",
+      "goal": 300,
+      "description": "jghjhg",
+      "creator": "hjgjhg",
       "image": "placeholder.jpg",
-      "donated": 10,
+      "donated": 0,
       "id": 6
     },
     {
-      "name": "name",
+      "name": "jygj",
       "goal": 300,
-      "description": "ggfdgfd",
-      "creator": "dfgfd",
+      "description": "jghjhg",
+      "creator": "hjgjhg",
       "image": "placeholder.jpg",
       "donated": 0,
       "id": 7
-    },
-    {
-      "name": "percente",
-      "goal": 100,
-      "description": "dfsfds",
-      "creator": "ligia",
-      "image": "placeholder.jpg",
-      "donated": 16,
-      "id": 8
-    },
-    {
-      "name": "fdsfs",
-      "goal": 300,
-      "description": "dfsfsd",
-      "creator": "fsfds",
-      "image": "placeholder.jpg",
-      "donated": 0,
-      "id": 9
     }
   ]
 }

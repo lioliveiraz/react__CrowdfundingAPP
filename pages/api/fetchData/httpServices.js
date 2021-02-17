@@ -9,7 +9,7 @@ axios.interceptors.response.use(null, error => {
 
     if (!clientError) {
         console.error(error);
-        toast("OPS!!!Something went wrong with our server!Try again latter");
+        toast.error("😲!!!Something went wrong with our server!Try again latter");
     }
 
     return Promise.reject(error);

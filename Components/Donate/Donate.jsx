@@ -15,8 +15,7 @@ function Donate({ project }) {
         e.preventDefault();
         project['donated'] = parseFloat(donationValue);
         const response = await changeDonationField(project.id, project);
-        /*  response && toast("🦄 YOU ARE AN UNICORN! THANK YOU VERY MUCH 🦄 "); */
-        response && setMessage("🦄 YOU ARE AN UNICORN! THANK YOU VERY MUCH 🦄 ");
+        response && toast("🦄 YOU ARE AN UNICORN! THANK YOU VERY MUCH 🦄 ");
 
     };
 
@@ -24,8 +23,6 @@ function Donate({ project }) {
 
 
         <form onSubmit={makeDonation}>
-            <h3>{message}</h3>
-
             <Input type="range" handleChange={handleDonateRange} label={`${donationValue}$`} max={project.goal} min={10} />
             <input type="submit" value="Donate" />
         </form>

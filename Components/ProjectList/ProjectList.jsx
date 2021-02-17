@@ -10,7 +10,7 @@ function ProjectList() {
 
     useEffect(() => {
         setProjects(projectArr);
-    }, []);
+    }, [projectArr]);
 
 
     return (
@@ -18,9 +18,7 @@ function ProjectList() {
             <SearchBar setProjects={setProjects} />
             {projects ? projects.map(project => (
                 <ProjectCard key={project.id} project={project} />
-            )) : projectArr.map(project => (
-                <ProjectCard key={project.id} project={project} />
-            ))}
+            )) : <p>Loading</p>}
         </div>
     );
 };
