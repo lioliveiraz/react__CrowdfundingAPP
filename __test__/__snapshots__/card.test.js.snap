@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project Card <Card> not rendering renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`Project Card <Card> rendering renders children when passed in 1`] = `undefined`;
+
+exports[`Project Card <Card> rendering renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`Project Card <Card> rendering renders correctly 2`] = `ShallowWrapper {}`;
+
+exports[`Project Card integration test renders children when passed in 1`] = `ShallowWrapper {}`;

@@ -15,7 +15,6 @@ function Form(props) {
 
     });
     const [error, setError] = useState({});
-    const [message, setMessage] = useState();
 
     const handleUserInput = (value, name) => {
         setUserInputs({ ...userInputs, [name]: value });
@@ -40,7 +39,7 @@ function Form(props) {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form data-testid="form" onSubmit={handleSubmit}>
                 <Input type="text" label="name" handleChange={handleUserInput} name="name" />
                 {error.name && <p style={{ color: "red", fontWeight: "bold" }}>{error.name}</p>}
                 <Input type="text" label="creator" name="creator" handleChange={handleUserInput} />
