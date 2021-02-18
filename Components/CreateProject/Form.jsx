@@ -51,6 +51,7 @@ function Form(props) {
                 <Input type="number" handleChange={handleUserInput} label="goal" name="goal" />
                 {error.goal && <p style={{ color: "red", fontWeight: "bold" }}>{error.goal}</p>}
                 <input type="submit" />
+
             </form>
             <ToastContainer />
 

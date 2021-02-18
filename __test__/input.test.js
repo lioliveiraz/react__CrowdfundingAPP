@@ -3,10 +3,13 @@ import { mount, spy, shallow } from 'enzyme';
 import sinon from 'sinon';
 
 describe('input', () => {
-    const fn = sinon.spy();
     let wrapper, userInput;
+    const onchange = sinon.spy();
+
+
+
     userInput = {
-        value: "", handleChange: fn, type: "", name: "", placeholder: "", label: "", max: ""
+        value: "", handleChange: onchange, type: "", name: "", placeholder: "", label: "", max: ""
     };
     ;
     describe('check render', () => {
@@ -17,15 +20,19 @@ describe('input', () => {
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.contains(<label />)).toBeTruthy();
+            expect(wrapper.find('input')).toHaveLength(1);
+
         });
     });
     describe('check mount', () => {
-        userInput = {
-            value: "value", handleChange: fn, type: "type", name: "name", placeholder: "placeholder", label: "label", max: 10
-        };
+
         beforeEach(() => {
+            userInput = {
+                value: "value", handleChange: onchange, type: "type", name: "name", placeholder: "placeholder", label: "label", max: 10
+            };
             wrapper = mount(<Input userInput={userInput} />);
         });
+
 
 
         it('should mount with right props', () => {
@@ -34,17 +41,22 @@ describe('input', () => {
         });
 
         it('allows us to set props', () => {
+
+            expect(wrapper.props().userInput.value).toEqual('value');
+
+
             wrapper.setProps({
 
-                value: "newValye"
+                userInput: { value: "newValue" }
 
             });
 
-            userInput['value'] = "newValue";
-
-            expect(wrapper.props().userInput).toEqual(userInput);
+            expect(wrapper.props().userInput.value).toEqual('newValue');
 
         });
+
+
+
     });
 
 

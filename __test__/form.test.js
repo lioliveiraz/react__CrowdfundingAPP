@@ -13,11 +13,16 @@ describe('<Form>', () => {
 
     };
 
-    it('should add items', () => {
+    it('should render correctly', () => {
 
         wrapper = shallow(
             <Form />
         );
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<input type="submit" />)).toBeTruthy();
+        expect(wrapper.find('p')).toHaveLength(0);
+        expect(wrapper.find('label')).toHaveLength(1);
+        expect(wrapper.find('textarea')).toHaveLength(1);
 
 
     });
