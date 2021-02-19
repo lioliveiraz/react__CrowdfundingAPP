@@ -7,8 +7,11 @@ export default function Provider(props) {
     const [projectArr, setProjectArr] = useState([]);
 
     useEffect(async () => {
+
         const response = await fetchData();
         setProjectArr(response);
+        console.log(props);
+
 
     }, []);
 

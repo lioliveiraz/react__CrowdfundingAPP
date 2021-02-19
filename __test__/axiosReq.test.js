@@ -19,9 +19,10 @@ describe('testing axios requests', () => {
     describe('fetchStaticPath', () => {
 
         it('should retrieve a success response', async () => {
-            status = "OK";
+            status = [1, 2, 3, 4, 5, 6];
+            //failing
             axios.get.mockImplementationOnce(() => Promise.resolve(status));
-            await expect(fetchStaticPath(1)).resolves.toEqual(status);
+            await expect(fetchData()).resolves.toEqual(status);
 
         });
         it(" request failure, retrieve an error", async () => {
