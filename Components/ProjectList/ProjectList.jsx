@@ -18,7 +18,7 @@ function ProjectList() {
             <SearchBar setProjects={setProjects} />
             {projects ? projects.map(project => (
                 <ProjectCard key={project.id} project={project} />
-            )) : <p>Loading</p>}
+            )) : <p>Loading...</p>}
         </div>
     );
 };

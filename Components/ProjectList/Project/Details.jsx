@@ -24,8 +24,8 @@ function Details() {
         <div>
             {projectDetails ?
                 <>
-                    <h3>{projectDetails.name}</h3>
-                    <img src={`/${projectDetails.image}`} alt={`project name: ${projectDetails.name}`} />
+                    <h3 >{projectDetails.name}</h3>
+                    <img data-testid="details--project_image" src={`/${projectDetails.image}`} alt={`project name: ${projectDetails.name}`} />
 
 
                     <div style={{ background: "gray", width: "500px", height: '8vh' }}>

@@ -5,7 +5,7 @@ import http from './httpServices';
  * @returns {object[]}
  */
 export async function fetchData() {
-    const response = await http.get("/projects");
+    const response = await http.get("/projects", { timeout: 1000 });
     return response.data;
 
 }

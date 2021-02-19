@@ -8,6 +8,7 @@ function Input(props) {
         <>
             <label htmlFor={name}>{label}</label>
             <input
+                data-testid="input"
                 value={value}
                 onChange={(e) => handleChange(e.target.value, e.target.name)}
                 name={name}
