@@ -6,12 +6,10 @@ describe('input', () => {
     let wrapper, userInput;
     const onchange = sinon.spy();
 
-
-
     userInput = {
         value: "", handleChange: onchange, type: "", name: "", placeholder: "", label: "", max: ""
     };
-    ;
+
     describe('check render', () => {
         beforeEach(() => {
             wrapper = shallow(<Input userInput={userInput} />);
@@ -24,6 +22,8 @@ describe('input', () => {
 
         });
     });
+
+
     describe('check mount', () => {
 
         beforeEach(() => {
@@ -33,8 +33,6 @@ describe('input', () => {
             wrapper = mount(<Input userInput={userInput} />);
         });
 
-
-
         it('should mount with right props', () => {
 
             expect(wrapper.props().userInput).toEqual(userInput);
@@ -43,22 +41,16 @@ describe('input', () => {
         it('allows us to set props', () => {
 
             expect(wrapper.props().userInput.value).toEqual('value');
-
-
             wrapper.setProps({
-
                 userInput: { value: "newValue" }
-
             });
-
             expect(wrapper.props().userInput.value).toEqual('newValue');
-
         });
-
 
 
     });
 
 
+    afterEach(() => { jest.clearAllMocks(); });
 
 });

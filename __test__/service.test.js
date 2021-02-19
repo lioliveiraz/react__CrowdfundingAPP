@@ -27,6 +27,22 @@ describe('testing helper functions', () => {
             expect(validateUserInput(mockInputs)).toEqual(expect.objectContaining(errorObject));
 
         });
+        it('should return an object with key goal and value string', () => {
+            mockInputs = {
+                name: 'name',
+                creator: "creator",
+                goal: 10,
+                description: "description",
+                image: "image",
+                donated: 0
+            };
+            errorObject = {
+                goal: "\"goal\" must be larger than or equal to 100",
+            };
+
+            expect(validateUserInput(mockInputs)).toEqual(expect.objectContaining(errorObject));
+
+        });
         it('should return void', () => {
             mockInputs = {
                 name: 'name',

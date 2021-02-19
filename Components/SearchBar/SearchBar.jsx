@@ -12,9 +12,9 @@ function SearchBar({ setProjects }) {
     };
 
     return (
-        <div>
+        <>
             <Input type="text" placeholder="Search" handleChange={handleSearch} />
-        </div>
+        </>
     );
 }
 
