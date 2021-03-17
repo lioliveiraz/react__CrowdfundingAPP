@@ -1,16 +1,21 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Context } from './../../context/ThemeContext';
-import ProjectCard from './Project/Card';
+import React, { useEffect, useState } from 'react';
+/* import { Context } from './../../context/ThemeContext';
+ */import ProjectCard from './Project/Card';
 import SearchBar from '../SearchBar/SearchBar';
+import { useDispatch, useSelector } from 'react-redux';
+import { setProjects } from './../../store/reducer';
 
 function ProjectList() {
-    const { projectArr } = useContext(Context);
-
-    const [projects, setProjects] = useState();
+    /*     const { projectArr } = useContext(Context);
+     */
+    const dispatch = useDispatch();
+    const [projects, setProjectsArr] = useState();
+    const projectsArr = useSelector((state) => state.projects.projects);
 
     useEffect(() => {
-        setProjects(projectArr);
-    }, [projectArr]);
+        dispatch(setProjects());
+        setProjectsArr(projectsArr);
+    }, []);
 
 
     return (

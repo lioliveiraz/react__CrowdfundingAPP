@@ -10,7 +10,6 @@ export default function Provider(props) {
 
         const response = await fetchData();
         setProjectArr(response);
-        console.log(props);
 
 
     }, []);

@@ -5,7 +5,7 @@ import http from './httpServices';
  * @returns {object[]}
  */
 export async function fetchData() {
-    const response = await http.get("/projects", { timeout: 1000 });
+    const response = await http.get("/projects"/* , { timeout: 1000 } */);
     return response.data;
 
 }
@@ -39,4 +39,4 @@ export async function changeDonationField(id, project) {
 export async function postProject(projectData) {
     const response = await http.post(`/projects`, projectData);
     return response.data;
-} 
+}
