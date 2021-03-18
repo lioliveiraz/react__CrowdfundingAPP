@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Input from '../Input/Input';
-import { Context } from './../../context/ThemeContext';
+import { useSelector } from 'react-redux';
 
 function SearchBar({ setProjects }) {
-    const { projectArr } = useContext(Context);
+    const projectsArr = useSelector((state) => state.projects.projects);
 
     const handleSearch = (value) => {
-        setProjects(projectArr.filter(({ name, creator }) =>
-            name.toLowerCase().includes(value.toLowerCase()) ||
-            creator.toLowerCase().includes(value.toLowerCase())));
+        setProjects(projectsArr.filter(({ name, creator }) => name.toLowerCase().includes(value.toLowerCase()) ||
+            creator.toLowerCase().includes(value.toLowerCase())
+        ));
     };
 
     return (
